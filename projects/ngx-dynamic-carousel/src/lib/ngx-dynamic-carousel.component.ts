@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lib-ngx-dynamic-carousel',
+  selector: 'ngx-dynamic-carousel',
   template: `
     <p>
       ngx-dynamic-carousel works!
