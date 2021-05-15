@@ -1,5 +1,5 @@
 <div class="flex items-center justify-around">
-    <div (click)="left()">
+    <div [class.disabled]="firstIndex == 0" (click)="left()">
         <ng-container *ngTemplateOutlet="leftArrowTemplate ? leftArrowTemplate : defaultRightArrowTemplate">
         </ng-container>
         <ng-template #defaultRightArrowTemplate>
@@ -10,7 +10,7 @@
         </ng-template>
     </div>
 
-    <div (click)="right()">
+    <div [class.disabled]="lastIndex == items.length - 1" (click)="right()">
         <ng-container *ngTemplateOutlet="rightArrowtemplate ? rightArrowtemplate : defaultLeftArrowTemplate">
         </ng-container>
         <ng-template #defaultLeftArrowTemplate>-></ng-template>

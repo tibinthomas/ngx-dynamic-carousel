@@ -4,6 +4,12 @@ import { Component, Input, OnInit, SimpleChanges, TemplateRef } from '@angular/c
   selector: 'ngx-dynamic-carousel',
   templateUrl: './ngx-dynamic-carousel.component.html',
   styles: [
+    `
+    .disabled {
+      pointer-events: none;
+      opacity: 50%
+    }
+    `
   ]
 })
 export class NgxDynamicCarouselComponent implements OnInit {
