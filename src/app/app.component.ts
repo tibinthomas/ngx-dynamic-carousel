@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngx-dynamic-carousel-app';
+  items = Array.from(Array(10), () => ({ imageUrl: 'https://picsum.photos/seed/picsum/200/300', name: Math.random(), age: Math.random() }));
 
 }

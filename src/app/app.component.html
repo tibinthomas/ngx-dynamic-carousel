@@ -1,6 +1,11 @@
-<ngx-dynamic-carousel>
-  <p>
-    Content
-  </p> 
+<ngx-dynamic-carousel [template]="template" [items]="items" [visibleCount]="1">
+  <ng-template let-item #template>
+    <div class="p-4 border border-gray-500">
+      <img [src]="item.imageUrl">
+      <span class="font-semibold">
+        {{ item.name }}
+      </span>
+    </div>
+  </ng-template> 
 </ngx-dynamic-carousel>
 
