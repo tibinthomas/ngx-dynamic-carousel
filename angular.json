@@ -108,6 +108,37 @@
           }
         }
       }
+    },
+    "ngx-dynamic-carousel": {
+      "projectType": "library",
+      "root": "projects/ngx-dynamic-carousel",
+      "sourceRoot": "projects/ngx-dynamic-carousel/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-dynamic-carousel/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-dynamic-carousel/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-dynamic-carousel/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-dynamic-carousel/src/test.ts",
+            "tsConfig": "projects/ngx-dynamic-carousel/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-dynamic-carousel/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-dynamic-carousel-app"
