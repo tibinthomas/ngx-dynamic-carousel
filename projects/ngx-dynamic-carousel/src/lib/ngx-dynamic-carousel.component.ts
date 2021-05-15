@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'ngx-dynamic-carousel',
-  template: `
-    <p>
-      ngx-dynamic-carousel works!
-    </p>
-  `,
+  templateUrl: './ngx-dynamic-carousel.component.html',
   styles: [
   ]
 })
