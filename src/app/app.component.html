@@ -1,4 +1,5 @@
-<ngx-dynamic-carousel [template]="template" [items]="items" [visibleCount]="1">
+<ngx-dynamic-carousel [template]="template" [items]="items" [visibleCount]="1"
+  [leftArrowTemplate]="leftArrowTemplate" [rightArrowtemplate]="rightArrowTemplate">
   <ng-template let-item #template>
     <div class="p-4 border border-gray-500">
       <img [src]="item.imageUrl">
@@ -7,5 +8,7 @@
       </span>
     </div>
   </ng-template> 
+  <ng-template #leftArrowTemplate>Left</ng-template>
+  <ng-template #rightArrowTemplate>Right</ng-template>
 </ngx-dynamic-carousel>
 
