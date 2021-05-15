@@ -11,6 +11,12 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "paths": {
+      "ngx-dynamic-carousel": [
+        "dist/ngx-dynamic-carousel/ngx-dynamic-carousel",
+        "dist/ngx-dynamic-carousel"
+      ]
+    },
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
