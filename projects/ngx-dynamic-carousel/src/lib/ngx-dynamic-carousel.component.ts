@@ -16,7 +16,7 @@ export class NgxDynamicCarouselComponent implements OnInit {
 
   constructor() { }
 
-  @Input() template!: TemplateRef<any>;
+  @Input() mainContentTemplate!: TemplateRef<any>;
   @Input() leftArrowTemplate!: TemplateRef<any>;
   @Input() rightArrowtemplate!: TemplateRef<any>;
   @Input() items: Array<any> = [];

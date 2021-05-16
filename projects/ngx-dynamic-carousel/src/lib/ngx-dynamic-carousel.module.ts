@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxDynamicCarouselComponent } from './ngx-dynamic-carousel.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -9,7 +10,8 @@ import { NgxDynamicCarouselComponent } from './ngx-dynamic-carousel.component';
     NgxDynamicCarouselComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    BrowserAnimationsModule
   ],
   exports: [
     NgxDynamicCarouselComponent

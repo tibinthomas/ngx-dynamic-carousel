@@ -6,7 +6,7 @@
             <- </ng-template>
     </div>
     <div *ngFor="let item of items.slice(firstIndex, lastIndex + 1); index as i">
-        <ng-template [ngTemplateOutlet]="template" [ngTemplateOutletContext]="{ $implicit: item }">
+        <ng-template [ngTemplateOutlet]="mainContentTemplate" [ngTemplateOutletContext]="{ $implicit: item }">
         </ng-template>
     </div>
 

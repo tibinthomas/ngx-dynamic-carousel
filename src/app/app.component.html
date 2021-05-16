@@ -1,6 +1,6 @@
-<ngx-dynamic-carousel [template]="template" [items]="items" [visibleCount]="1"
+<ngx-dynamic-carousel [mainContentTemplate]="mainContentTemplate" [items]="items" [visibleCount]="1"
   [leftArrowTemplate]="leftArrowTemplate" [rightArrowtemplate]="rightArrowTemplate">
-  <ng-template let-item #template>
+  <ng-template let-item #mainContentTemplate>
     <div class="p-4 border border-gray-500">
       <img [src]="item.imageUrl">
       <span class="font-semibold">
