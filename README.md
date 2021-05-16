@@ -1,27 +1,68 @@
-# NgxDynamicCarousel
+# ngx-dynamic-carousel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+The ngx-dynamic-carousel library is a carousel component built using angular.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To install this library, run:
 
-## Code scaffolding
+```bash
+$ npm i ngx-dynamic-carousel --save
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Using this library
 
-## Build
+From your Angular `AppModule`:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```typescript
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-## Running unit tests
+import { AppComponent } from "./app.component";
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import { NgxDynamicCarouselModule } from "../../projects/ngx-dynamic-carousel/src/lib/ngx-dynamic-carousel.module";
 
-## Running end-to-end tests
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, NgxDynamicCarouselModule],
+  providers: [],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
 
-## Further help
+Once the library is imported, you can use its component in your Angular application:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```xml
+<!-- You can now use ngx-dynamic-carousel component in app.component.html -->
+<ngx-dynamic-carousel [mainContentTemplate]="mainContentTemplate" [items]="items" [visibleCount]="1"
+  [leftArrowTemplate]="leftArrowTemplate" [rightArrowtemplate]="rightArrowTemplate" [animationState]="'fade'">
+  <ng-template let-item #mainContentTemplate>
+    <div class="p-4 border border-gray-500">
+      <img [src]="item.imageUrl">
+      <span class="font-semibold">
+        {{ item.name }}
+      </span>
+    </div>
+  </ng-template>
+  <ng-template #leftArrowTemplate>Left</ng-template>
+  <ng-template #rightArrowTemplate>Right</ng-template>
+</ngx-dynamic-carousel>
+```
+
+## Available options
+
+|       Option        | Default value |                                                              Description                                                               | Example value                                                                  |
+| :-----------------: | :-----------: | :------------------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------ |
+| mainContentTemplate |    _none_     |                               (Required) The main content template defines the template of the carousel.                               | Refer #mainContentTemplate in the above example                                |
+|        items        |    _none_     |                   It is an array of objects that should contain all the values that is to be binded in the template                    | In the example above, the imageUrl and name are keys that are passed via items |
+|    visibleCount     |      _1_      |                                   The number of images that must be appeared in the screen at a time                                   | _4_ (Four images will be dislpayed at one stretch)                             |
+|  leftArrowTemplate  |     _<-_      |                                 It is a template to define the left navigation symbol of the carousel                                  | _Left_                                                                         |
+| rightArrowTemplate  |     _->_      |                                 It is a template to define the right navigation symbol of the carousel                                 | _Right_                                                                        |
+|   animationState    |    _fade_     | The animationState can take the values _fade_, _scale_ or _custom_. If the _custom_ is set, then the user can customize the animation. | In the above example it is set as _fade_                                       |
+
+## License
+
+MIT ©
