@@ -5,7 +5,7 @@
         <ng-template #defaultLeftArrowTemplate>
             <- </ng-template>
     </div>
-    <div *ngFor="let item of items.slice(firstIndex, lastIndex + 1); index as i" @cardAnimator>
+    <div *ngFor="let item of items.slice(firstIndex, lastIndex + 1); index as i; trackBy: trackByFn" [@animationTrigger]="animationState">
         <ng-template [ngTemplateOutlet]="mainContentTemplate" [ngTemplateOutletContext]="{ $implicit: item }">
         </ng-template>
     </div>
