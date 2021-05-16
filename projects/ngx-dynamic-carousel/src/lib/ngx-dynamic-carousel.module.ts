@@ -7,14 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    NgxDynamicCarouselComponent
+    NgxDynamicCarouselComponent,
   ],
   imports: [
     CommonModule,
     BrowserAnimationsModule
   ],
   exports: [
-    NgxDynamicCarouselComponent
+    NgxDynamicCarouselComponent,
   ]
 })
 export class NgxDynamicCarouselModule { }
