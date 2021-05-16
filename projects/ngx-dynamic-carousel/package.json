@@ -8,5 +8,14 @@
   "dependencies": {
     "tslib": "^2.1.0"
   },
-  "author": "Tibin && Fenn"
+  "author": "Tibin && Fenn",
+  "contributors": [{
+    "email": "tibinthomas@outlook.com",
+    "name": "Tibin Thomas",
+    "url": "https://www.github.com/tibinthomass"
+  },{
+    "email": "fennig1997@gmail.com",
+    "name": "Fenn Saji",
+    "url": "https://www.github.com/fennsaji"
+  }]
 }
