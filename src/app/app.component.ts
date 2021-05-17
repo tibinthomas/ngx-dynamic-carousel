@@ -30,6 +30,6 @@ export const scaleIn=animation([
   ]
 })
 export class AppComponent {
-  items = Array.from(Array(10), () => ({ imageUrl: 'https://picsum.photos/seed/picsum/200/300', name: Math.random(), age: Math.random() }));
+  items = Array.from(Array(5), () => ({ imageUrl: `https://picsum.photos/id/${Math.floor((Math.random() * 100) + 1)}/200/300`, name: Math.random(), age: Math.random() }));
 
 }

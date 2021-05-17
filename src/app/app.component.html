@@ -1,7 +1,7 @@
 <ngx-dynamic-carousel [mainContentTemplate]="mainContentTemplate1" [items]="items" [visibleCount]="1"
-  [leftArrowTemplate]="leftArrowTemplate1" [rightArrowtemplate]="rightArrowTemplate1" [animationState]="'fade'">
+  [leftArrowTemplate]="leftArrowTemplate1" [rightArrowtemplate]="rightArrowTemplate1" [animationState]="'fade'" [autoPlayInterval]="3000">
   <ng-template let-item #mainContentTemplate1>
-    <div class="p-4 border border-gray-500">
+    <div class="p-4 border border-gray-500 min-w-48">
       <img [src]="item.imageUrl">
       <span class="font-semibold">
         {{ item.name }}
