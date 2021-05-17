@@ -4,7 +4,6 @@ import { NgxDynamicCarouselComponent } from './ngx-dynamic-carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
 @NgModule({
   declarations: [
     NgxDynamicCarouselComponent,
