@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges, TemplateRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, SimpleChanges, TemplateRef } from '@angular/core';
 
 import { animate, animation, style, transition, trigger, useAnimation } from '@angular/animations';
 
@@ -16,6 +16,7 @@ export const scaleIn = animation([
 @Component({
   selector: 'ngx-dynamic-carousel',
   templateUrl: './ngx-dynamic-carousel.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [
     `
     .disabled {

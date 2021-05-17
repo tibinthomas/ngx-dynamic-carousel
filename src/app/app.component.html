@@ -1,3 +1,18 @@
+<ngx-dynamic-carousel [mainContentTemplate]="mainContentTemplate1" [items]="items" [visibleCount]="1"
+  [leftArrowTemplate]="leftArrowTemplate1" [rightArrowtemplate]="rightArrowTemplate1" [animationState]="'fade'">
+  <ng-template let-item #mainContentTemplate1>
+    <div class="p-4 border border-gray-500">
+      <img [src]="item.imageUrl">
+      <span class="font-semibold">
+        {{ item.name }}
+      </span>
+    </div>
+  </ng-template> 
+  <ng-template #leftArrowTemplate1>Left</ng-template>
+  <ng-template #rightArrowTemplate1>Right</ng-template>
+</ngx-dynamic-carousel>
+
+
 <ngx-dynamic-carousel [mainContentTemplate]="mainContentTemplate" [items]="items" [visibleCount]="1"
   [leftArrowTemplate]="leftArrowTemplate" [rightArrowtemplate]="rightArrowTemplate" [animationState]="'fade'">
   <ng-template let-item #mainContentTemplate>
