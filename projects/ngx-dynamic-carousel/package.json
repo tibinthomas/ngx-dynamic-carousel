@@ -1,21 +1,42 @@
 {
   "name": "ngx-dynamic-carousel",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "peerDependencies": {
     "@angular/common": "^12.0.0",
-    "@angular/core": "^12.0.0"
+    "@angular/core": "^12.0.0",
+    "@angular/animations": "~12.0.0"
   },
   "dependencies": {
     "tslib": "^2.1.0"
   },
   "author": "Tibin && Fenn",
-  "contributors": [{
-    "email": "tibinthomas@outlook.com",
-    "name": "Tibin Thomas",
-    "url": "https://www.github.com/tibinthomass"
-  },{
-    "email": "fennig1997@gmail.com",
-    "name": "Fenn Saji",
-    "url": "https://www.github.com/fennsaji"
-  }]
+  "contributors": [
+    {
+      "email": "tibinthomas@outlook.com",
+      "name": "Tibin Thomas",
+      "url": "https://www.github.com/tibinthomass"
+    },
+    {
+      "email": "fennig1997@gmail.com",
+      "name": "Fenn Saji",
+      "url": "https://www.github.com/fennsaji"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/tibinthomas/ngx-dynamic-carousel"
+  },
+  "keywords": [
+    "angular",
+    "angular component",
+    "carousel",
+    "ngx carousel",
+    "ng carousel",
+    "ng carosel",
+    "carosel"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://www.github.com/tibinthomas/ngx-dynamic-carousel/issues"
+  }
 }
