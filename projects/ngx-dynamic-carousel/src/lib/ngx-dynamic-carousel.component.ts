@@ -96,7 +96,8 @@ export class NgxDynamicCarouselComponent implements OnInit, AfterViewInit {
       if (this.firstIndex !== 0) {
         this.left();
       } else {
-        this.resetIndex()
+        this.firstIndex = this.items.length - this.visibleCount;
+        this.lastIndex = this.items.length - 1;
       }
     } else {
       if (this.lastIndex !== this.items.length - 1) {
